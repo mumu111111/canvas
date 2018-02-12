@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的画板</title>
+  <link rel="stylesheet" href="./style1.css">
+</head>
+
+<body>
+  <canvas id="xxx"></canvas>
+  <div id="actions" class="actions">
+
+    <svg class="icon active" id="pen">
+      <use xlink:href="#icon-Pen"> </use>
+    </svg>
+
+    <svg class="icon" id="eraser">
+      <use xlink:href="#icon-eraser"> </use>
+    </svg>
+    <svg class="icon" id="clear">
+      <use xlink:href="#icon-LC_icon_delete_line_1"> </use>
+    </svg>
+    <svg class="icon" id="download">
+      <use xlink:href="#icon-download3"> </use>
+    </svg>
+
+    <!-- <button id="eraser">橡皮擦</button>
+    <button id="brush">画笔</button> -->
+  </div>
+
+
+  <ol class="colors">
+    <li id="black" class="black active"></li>
+    <li id="red" class="red "></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+  </ol>
+
+  <ol class="sizes">
+    <li id="thin" class="thin"></li>
+    <li id="thick" class="thick"></li>
+  </ol>
+
+  <script src="./main.js"></script>
+  <script src="//at.alicdn.com/t/font_569627_n2ee3is3x35fjemi.js"></script>
+</body>
+
+</html>
