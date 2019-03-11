@@ -56,12 +56,12 @@ width: 1.6em;
 height: 1.6em;
 margin: 0 10px;
 transition: all 0.3s;
-
+cursor: point;
 }
 .actions svg.active{
 fill: red;
 transform: scale(1.2);
-
+cursor: point;
 }
 
 .colors{

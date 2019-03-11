@@ -93,11 +93,11 @@ blue.onclick = function () {
 
 
 thin.onclick = function () {
-  lineWidth = 5;//不需要兼顾 画的问题，只设置粗细多少就行，将变量赋给划线的lineWidth
+  lineWidth = 2;//不需要兼顾 画的问题，只设置粗细多少就行，将变量赋给划线的lineWidth
 }
 
 thick.onclick = function () {
-  lineWidth = 10;
+  lineWidth = 5;
 }
 
 
@@ -317,10 +317,10 @@ function drawLine(x1, y1, x2, y2) {
   context.beginPath()
   context.fillStyle = "black"
   context.strockStyle = 'black'
-  context.moveTo(x1, y1)
+  context.moveTo(x1+0.5, y1)
   context.lineWidth = lineWidth  //这样粗细写死了，变成变量使用
 
-  context.lineTo(x2, y2)
+  context.lineTo(x2+0.5, y2)
   context.stroke()//绘制线条
   context.closePath()
 
