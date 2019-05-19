@@ -18,17 +18,47 @@ eraser.onclick = function () {
   eraserEnabled = true //切换状态 
   eraser.classList.add('active')
   pen.classList.remove('active')
-
+  clear.classList.remove('active')
+  download.classList.remove('active')
 }
 
 //点击画笔  切换 css状态  
-//css z状态必须是actions  和 actions.x 两种
+//css z状态必须是acions  和 actions.x 两种
 pen.onclick = function () {
   eraserEnabled = false
   pen.classList.add('active')
   eraser.classList.remove('active')
-
+  clear.classList.remove('active')
+  download.classList.remove('active')
 }
+  
+
+clear.onclick = function () {
+  context.clearRect(0, 0, xxx.width, xxx.height)
+  
+  clear.classList.add('active')
+  pen.classList.remove('.active')
+  eraser.classList.remove('active')
+  clear.classList.remove('active')
+  download.classList.remove('active')
+}
+
+download.onclick = function () {
+  download.classList.add('active')
+  clear.classList.remove('active')
+  pen.classList.remove('.active')
+  eraser.classList.remove('active')
+  clear.classList.remove('active')
+  var url = xxx.toDataURL('image/png')
+  console.log(url)
+  var a = document.createElement('a')
+  document.body.appendChild(a)
+  a.href = url
+  a.download = '我的画'//下载图的名字
+  a.target = '_blank'
+  a.click() //调用 click()
+}
+
 black.onclick = function () {
   black.classList.add('active')
   green.classList.remove('active')
@@ -137,34 +167,29 @@ thick.onclick = function () {
 }
 
 
-clear.onclick = function () {
-  context.clearRect(0, 0, xxx.width, xxx.height)
-}
-
-download.onclick = function () {
-  var url = xxx.toDataURL('image/png')
-  console.log(url)
-  var a = document.createElement('a')
-  document.body.appendChild(a)
-  a.href = url
-  a.download = '我的画'//下载图的名字
-  a.target = '_blank'
-  a.click() //调用 click()
-}
 
 function autoSetCanvasSize(canvas) {
   setCanvasSize()
   // 窗口的大小变动 后 触发
   window.onresize = function () {
+    var data_url = xxx.toDataURL();
     setCanvasSize()
+    var image = new Image();
+    image.src = data_url;
+    image.onload = function () {
+      context.drawImage(image, 0, 0);
+    }
   }
   function setCanvasSize() {
     var pageWidth = document.documentElement.clientWidth
     var pageHeight = document.documentElement.clientHeight
     canvas.width = pageWidth
     canvas.height = pageHeight
+
   }
+
 }
+
 
 function lisenToUser(canvas) {
 

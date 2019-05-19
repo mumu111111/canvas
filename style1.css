@@ -56,12 +56,29 @@ width: 1.6em;
 height: 1.6em;
 margin: 0 10px;
 transition: all 0.3s;
-cursor: point;
+cursor: url("./pen.png"), default;
 }
-.actions svg.active{
+
+.pen.active{
 fill: red;
 transform: scale(1.2);
-cursor: point;
+cursor: url("./pen.png"), default;
+}
+
+.eraser.active{
+  fill: red;
+  transform: scale(1.2);
+  cursor: url("./eraser.png"), default;
+}
+
+.clear.active{
+   fill: red;
+   transform: scale(1.2);
+}
+
+.download.active{
+  fill: red;
+  transform: scale(1.2);
 }
 
 .colors{
