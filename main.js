@@ -39,7 +39,6 @@ clear.onclick = function () {
   clear.classList.add('active')
   pen.classList.remove('.active')
   eraser.classList.remove('active')
-  clear.classList.remove('active')
   download.classList.remove('active')
 }
 
@@ -48,7 +47,6 @@ download.onclick = function () {
   clear.classList.remove('active')
   pen.classList.remove('.active')
   eraser.classList.remove('active')
-  clear.classList.remove('active')
   var url = xxx.toDataURL('image/png')
   console.log(url)
   var a = document.createElement('a')
@@ -70,9 +68,8 @@ black.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = 'black'
   context.strokeStyle = 'black'
+  pen.style.fill = 'black'
 }
-
-
 red.onclick = function () {
   red.classList.add('active')
   green.classList.remove('active')
@@ -84,6 +81,7 @@ red.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = 'red'
   context.strokeStyle = 'red'
+  pen.style.fill = 'red'
 }
 green.onclick = function () {
   green.classList.add('active')
@@ -96,6 +94,7 @@ green.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = 'green'
   context.strokeStyle = 'green'
+  pen.style.fill = 'green'
 }
 blue.onclick = function () {
   blue.classList.add('active')
@@ -108,6 +107,7 @@ blue.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = 'blue'
   context.strokeStyle = 'blue'
+  pen.style.fill = 'blue'
 }
 yellow.onclick = function () {
   yellow.classList.add('active')
@@ -119,6 +119,7 @@ yellow.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = 'yellow'
   context.strokeStyle = 'yellow'
+  pen.style.fill = 'yellow'
 }
 yellowgreen.onclick = function () {
   yellowgreen.classList.add('active')
@@ -130,7 +131,9 @@ yellowgreen.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = 'yellowgreen'
   context.strokeStyle = 'yellowgreen'
+  pen.style.fill = 'yellowgreen'
 }
+
 lan.onclick = function () {
   lan.classList.add('active')
   red.classList.remove('active')
@@ -141,6 +144,7 @@ lan.onclick = function () {
   hui.classList.remove('active')
   context.fillStyle = '#1BE6ED'
   context.strokeStyle = '#1BE6ED'
+  pen.style.fill = '#1BE6ED'
 }
 hui.onclick = function () {
   hui.classList.add('active')
@@ -152,6 +156,7 @@ hui.onclick = function () {
   lan.classList.remove('active')
   context.fillStyle = '#e4e4e4'
   context.strokeStyle = '#e4e4e4'
+  pen.style.fill = '#e4e4e4'
 }
 
 thin.onclick = function () {

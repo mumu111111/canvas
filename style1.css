@@ -60,7 +60,7 @@ cursor: url("./pen.png"), default;
 }
 
 .pen.active{
-fill: red;
+/* fill: red; */
 transform: scale(1.2);
 cursor: url("./pen.png"), default;
 }
