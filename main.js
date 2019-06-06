@@ -37,7 +37,7 @@ clear.onclick = function () {
   context.clearRect(0, 0, xxx.width, xxx.height)
   
   clear.classList.add('active')
-  pen.classList.remove('.active')
+  pen.classList.remove('active')
   eraser.classList.remove('active')
   download.classList.remove('active')
 }
@@ -45,7 +45,7 @@ clear.onclick = function () {
 download.onclick = function () {
   download.classList.add('active')
   clear.classList.remove('active')
-  pen.classList.remove('.active')
+  pen.classList.remove('active')
   eraser.classList.remove('active')
   var url = xxx.toDataURL('image/png')
   console.log(url)
