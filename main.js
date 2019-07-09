@@ -40,6 +40,7 @@ clear.onclick = function () {
   pen.classList.remove('active')
   eraser.classList.remove('active')
   download.classList.remove('active')
+  
 }
 
 download.onclick = function () {
